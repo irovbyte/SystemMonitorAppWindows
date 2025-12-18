@@ -1,6 +1,6 @@
 # System Monitor
 
-<img width="340" height="341" alt="image" src="https://github.com/user-attachments/assets/f6757057-8eaf-4c6c-9dc8-55bfe610afaa" />
+<img width="895" height="588" alt="image" src="https://github.com/user-attachments/assets/096044b6-d0b2-4cc4-aa57-62235a233d59" />
 
 System Monitor — это лёгкое и удобное приложение для мониторинга системных ресурсов Windows. Оно показывает загрузку процессора, оперативной памяти, дисков реальном времени, имеет современный интерфейс и работает максимально быстро.
 
