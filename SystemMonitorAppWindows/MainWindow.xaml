@@ -1,12 +1,81 @@
 ﻿<Window x:Class="SystemMonitorAppWindows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SystemMonitorAppWindows"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Login"
+        Height="400" Width="450"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E1E" Foreground="White">
+
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+
+            <!-- Заголовок -->
+            <TextBlock Text="Вход"
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Foreground="DodgerBlue"
+                       HorizontalAlignment="Center"/>
+
+            <!-- Поле логина -->
+            <TextBox x:Name="UsernameBox"
+                     FontSize="18"
+                     Padding="10"
+                     Background="#2D2D30"
+                     Foreground="White"
+                     BorderBrush="Transparent"
+                     HorizontalContentAlignment="Center"/>
+
+            <!-- Поле пароля -->
+            <PasswordBox x:Name="PasswordBox"
+                         FontSize="18"
+                         Padding="10"
+                         Background="#2D2D30"
+                         Foreground="White"
+                         BorderBrush="Transparent"
+                         HorizontalContentAlignment="Center"/>
+
+            <!-- Кнопка -->
+            <Button Content="Войти"
+                    Height="45"
+                    FontSize="20"
+                    Background="DodgerBlue"
+                    Foreground="White"
+                    BorderThickness="0"
+                    HorizontalAlignment="Center"
+                    Click="LoginButton_Click" Width="174">
+             
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                            CornerRadius="10">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Margin" Value="0,10,0,0"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3A8DFF"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1E5BBE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock Text="Регистрация"
+           Foreground="DodgerBlue"
+           FontSize="14"
+           TextDecorations="Underline"
+           HorizontalAlignment="Center"
+           Cursor="Hand"
+           Margin="0,5,0,0"
+           MouseLeftButtonUp="Register_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
